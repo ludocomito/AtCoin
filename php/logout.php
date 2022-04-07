@@ -21,8 +21,8 @@
         
 		<?php 
         
-  			$login = 'Login.php';
-            $index='index.html';
+  			$login = './Login.php';
+            $index='../index.html';
   			session_start();
     
     		$username=$_SESSION['username'];

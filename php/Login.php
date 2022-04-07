@@ -168,12 +168,12 @@ span.psw {
 	
 		<h2> Login</h2>
 
-<form action="GestioneLoginUtenti.php" method="POST">
+<form action="./GestioneLoginUtenti.php" method="POST">
 <div class="principal">
   <!-- bordo contenintore-->
  
   <div class="imgcontainer">
-    <img src="utente_grigio.png" alt="Avatar" class="avatar">
+    <img src="../assets/utente_grigio.png" alt="Avatar" class="avatar">
   </div>
 	<br>
   <div class="container">
@@ -185,10 +185,10 @@ span.psw {
 	<br>
     <input class="form-control" type="password" placeholder="Inserisci la Password" name="psw" maxlength="32" minlength="4" required>
         <br>
-    <button onclick="window.location.href='index.html';" type="button" class="cancelbtn">Cancel</button> 
+    <button onclick="window.location.href='../index.html';" type="button" class="cancelbtn">Cancel</button> 
 	<button type="submit" name="submit">Accedi</button>
 	<br>
-    <a href="Registrazione.php">Non sei registrato? Clicca qui!</a>
+    <a href="./Registrazione.php">Non sei registrato? Clicca qui!</a>
 	
 </div>
 	</div>
@@ -196,4 +196,4 @@ span.psw {
 	
 	</body>
 	
-</html>
+</html>
