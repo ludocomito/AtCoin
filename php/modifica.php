@@ -26,9 +26,9 @@
   <style>
     .center_div {
       margin: 0 auto;
-      width: 67%
-        /* value of your choice which suits your alignment */
-        margin-top: 5px;
+      width: 67%;
+      /* value of your choice which suits your alignment */
+      margin-top: 5px;
     }
 
     .center {
@@ -175,10 +175,10 @@
 
       //acquisisco la password del cliente
       $query = "SELECT * FROM Clienti where username='" . $username . "'";
-      $ris = mysql_query($query) or die("Query fallita");
+      $ris = mysqli_query($db, $query) or die("Query fallita");
 
 
-      while ($riga = mysql_fetch_array($ris, MYSQL_ASSOC)) {
+      while ($riga = mysqli_fetch_array($ris, MYSQLI_ASSOC)) {
         $psw = $riga['password'];
       }
       if ($psw != md5($vecchia))
@@ -186,7 +186,7 @@
       else {
         $query2 = "Update Clienti set password='" . MD5($nuova) . "' where username='" . $username . "';";
 
-        $ris = mysql_query($query2) or die("Query fallita 2");
+        $ris = mysqli_query($db, $query2) or die("Query fallita 2");
 
         echo ("<br><h4>Cambio password avvenuto !</h4>");
       }

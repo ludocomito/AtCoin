@@ -31,9 +31,9 @@
 
     .center_div {
       margin: 0 auto;
-      width: 67%
-        /* value of your choice which suits your alignment */
-        margin-top: 5px;
+      width: 67%;
+      /* value of your choice which suits your alignment */
+      margin-top: 5px;
     }
 
     .center {
@@ -52,6 +52,7 @@
 <body style="font-family: Helvetica, Sans-Serif">
 
   <?php
+  //error_reporting(0);
   $login = './Login.php';
   session_start();
 
@@ -70,7 +71,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <img class="structural" src="../assets/logoMenu.png" alt="logo" />
+
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
@@ -134,7 +135,7 @@
           <div class="caption">
             <h3>Pre-Ordina</h3>
             <p>Vuoi pre-ordinare la nostra moneta @COIN?<br> Pre-ordina finchè sei in tempo! <br> </p>
-            <p class="center"><a href="compra.php" class="btn btn-success" role="button">Pre-ordina ora</a></p>
+            <p class="center"><a href="./compra.php" class="btn btn-success" role="button">Pre-ordina ora</a></p>
           </div>
         </div>
       </div>
@@ -142,11 +143,11 @@
 
       <div class="col center">
         <div class="thumbnail">
-          <img src="investimento.jpeg" width="70%" height="70%" alt="img2">
+          <img src="../assets/investimento.jpeg" width="70%" height="70%" alt="img2">
           <div class="caption">
             <h3>Vuoi conoscere di più?</h3>
             <p>Guarda meglio il nostro sito o chiedi a noi per avere altre info su @COIN</p>
-            <p class="center"><a href="../index.html" class="btn btn-info" role="button">Info</a> <a href="http://luis22.altervista.org/#Contatti" class="btn btn-default" role="button">Contattaci</a></p>
+            <p class="center"><a href="../index.html" class="btn btn-info" role="button">Info</a> <a href="../index.html" class="btn btn-default" role="button">Contattaci</a></p>
           </div>
         </div>
       </div>
@@ -160,7 +161,7 @@
 
         //stampa tutti i valori
         $query = "SELECT * FROM Ordini JOIN Clienti ON Ordini.ID_cliente=Clienti.ID_cliente where username='" . $username . "'";
-        $ris = mysql_query($query) or die("Query fallita 1");
+        $ris = mysqli_query($db, $query) or die("Query fallita 1");
 
         echo " <style> th,td{font-family: Helvetica, Sans-Serif;padding: 10px;} h1{font-family: Helvetica, Sans-Serif; font-size:20pt; margin:2px 2px 2px 10px; } div{width:100%;}button{font-family: Helvetica, Sans-Serif; font-size:20pt; margin:2px 2px 2px 10px; }</style>";
 
@@ -176,7 +177,7 @@
 							<th>Prezzo in euro</th>
 				 		 </tr></thead><tbody>";
 
-        while ($riga = mysql_fetch_array($ris, MYSQL_ASSOC)) {
+        while ($riga = mysqli_fetch_array($ris, MYSQLI_ASSOC)) {
           $prezzo = $riga['coin'] / $riga['prezzo_unitario_euro'];
 
           echo "<tr>";

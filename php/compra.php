@@ -183,10 +183,10 @@
 
       //acquisisco l'id cliente
       $query = "SELECT ID_cliente FROM Clienti where username='" . $username . "'";
-      $ris = mysql_query($query) or die("Query fallita");
+      $ris = mysqli_query($db, $query) or die("Query fallita");
 
 
-      while ($riga = mysql_fetch_array($ris, MYSQL_ASSOC)) {
+      while ($riga = mysqli_fetch_array($ris, MYSQLI_ASSOC)) {
         $ID_cliente = $riga['ID_cliente'];
       }
 
@@ -194,7 +194,7 @@
 
       $query2 = "INSERT INTO Ordini(coin,prezzo_unitario_euro,ID_cliente) VALUES ('" . $coin . "','" . $prezzo_unitario_euro . "','" . $ID_cliente . "');";
 
-      $ris = mysql_query($query2) or die("Query fallita 2");
+      $ris = mysqli_query($db, $query2) or die("Query fallita 2");
 
       echo ("<br><h4>Pre ordinazione di " . $coin . " @COIN avvenuta con successo !</h4>");
     }

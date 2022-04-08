@@ -50,9 +50,9 @@
 		}
 	}
 	$query = "select * from Clienti where username='" . $username . "' AND password='" . MD5($psw) . "'";
-	$ris = mysql_query($query) or die("Query fallita 1");
+	$ris = mysqli_query($db, $query) or die("Query fallita 1");
 
-	if (mysql_num_rows($ris) > 0) {
+	if (mysqli_num_rows($ris) > 0) {
 		session_start();
 		$_SESSION['username'] = $username;
 
