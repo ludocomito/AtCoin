@@ -93,7 +93,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="http://luis22.altervista.org/#Contatti"><span class="medio">Contattataci <ion-icon name="paper-plane"></ion-icon></span></a>
+            <a class="nav-link" href="../index.html#Contatti"><span class="medio">Contattataci <ion-icon name="paper-plane"></ion-icon></span></a>
           </li>
         </ul>
 
@@ -147,7 +147,7 @@
           <div class="caption">
             <h3>Vuoi conoscere di più?</h3>
             <p>Guarda meglio il nostro sito o chiedi a noi per avere altre info su @COIN</p>
-            <p class="center"><a href="../index.html" class="btn btn-info" role="button">Info</a> <a href="../index.html" class="btn btn-default" role="button">Contattaci</a></p>
+            <p class="center"><a href="../index.html" class="btn btn-info" role="button">Info</a> <a href="../index.html#Contatti" class="btn btn-default" role="button">Contattaci</a></p>
           </div>
         </div>
       </div>

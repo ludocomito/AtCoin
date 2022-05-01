@@ -100,7 +100,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="http://luis22.altervista.org/#Contatti"><span class="medio">Contattataci <ion-icon name="paper-plane"></ion-icon></span></a>
+            <a class="nav-link" href="../index.html#Contatti"><span class="medio">Contattataci <ion-icon name="paper-plane"></ion-icon></span></a>
           </li>
         </ul>
 
@@ -203,7 +203,7 @@
 
   </div>
 
-  <a href="/#" class="scrolltotop"><img src="frecciasu2.png" align="right" width=30></a>
+  
 </body>
 
 </html>
