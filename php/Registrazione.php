@@ -130,7 +130,7 @@
 			 </div>
 			 <input class="btn btn-danger" type="reset" value="Reset"> <input type="submit" class="btn btn-primary" name="submit" value="Salva">
 			 
-			<button  onclick="window.location.href='index.html';" type="button" class="btn btn-info destra" >Ritorno al menu</button>
+			<button  onclick="window.location.href='../index.html';" type="button" class="btn btn-info destra" >Ritorno al menu</button>
 			 
 			</form>
             
@@ -207,8 +207,9 @@
                		$query="INSERT INTO Clienti(username,cognome,nome,dataNascita,citta,nazione,indirizzo,CAP,cellulare,email,password) VALUES ('".$username."','".$cognome."','".$nome."','".$nascita."','".$citta."','".$nazione."','".$indirizzo."','".$CAP."','".$cellulare."','".$email."','".MD5($psw)."');";		
 					$ris=mysqli_query($db,$query) or die("Query fallita 0");
 				
+					//header('Refresh: 0; url=' . $login); //HEADER DEVE SEMPRE PRECEDERE OUTPUT
                     echo("<br><h4>Registrazione avvenuta con successo !</h4>");
-                    header('Refresh: 0; url=' . $login);
+                    
 				}
               
          		
@@ -216,11 +217,11 @@
 				?>
                 
                 <br><button  onclick="window.location.href='Login.php';" type='button' class='btn btn-success' >Accedi</button><br>
-				<?php 
+			<?php 
             
-          	 	}
+          	}
             
-            	?>
+            ?>
             
             </div>
 			

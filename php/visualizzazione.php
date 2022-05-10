@@ -153,7 +153,7 @@
       </div>
       <br>
 
-      <div>
+      <div style="margin-bottom: 10px;">
         <?php
         require './Config.php';
         require './Connect.php';
@@ -192,6 +192,7 @@
 
         ?>
         <button onclick="window.location.href='../index.html';" type="button" class="btn btn-danger">Ritorno alla home</button>
+      
       </div>
     </div>
   </div>

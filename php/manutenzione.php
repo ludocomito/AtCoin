@@ -21,7 +21,7 @@
         
 		<?php 
         
-            $index='index.html';
+            $index='../index.html';
 
  		 ?>
 	</head>

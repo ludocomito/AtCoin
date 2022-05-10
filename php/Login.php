@@ -16,7 +16,7 @@
         .principal {
             border: 3px solid #f1f1f1;
             text-align: center;
-            height: 450px;
+            height: 550px;
         }
 
         .container {
