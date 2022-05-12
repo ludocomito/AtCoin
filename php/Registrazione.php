@@ -6,10 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-  
-		<title>Registrazione</title>
-		<style>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 
+		  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <!-- per svg alert -->
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+          </svg>
+
+		<title>Registrazione</title>
+		
+
+		<style>
 			
 			.max{
 				font-family: Helvetica, Sans-Serif;
@@ -36,7 +50,7 @@
 			.center_div
             {
 				margin: 0 auto;
-				width:85% /* value of your choice which suits your alignment */
+				width:85%; /* value of your choice which suits your alignment */
 			}
             
 
@@ -70,25 +84,44 @@
   </head>
   <br>
 	<body style="font-family: Helvetica, Sans-Serif">
-    
+
+	
+				<!-- da visualizzare solo in caso di registrazione -->
+		<div id= "MyAlert" class=" center_div" style="margin-bottom: 10px;">
+			<h2>Registrazione effettuata !</h2>
+			<div class="alert alert-success d-flex align-items-center" role="alert">
+            	<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+            	<div>
+                	<span> &nbsp La registrazione dell'utente : " " è avvenuta con successo !</span>
+            	</div>
+       		</div>
+			
+			<button  onclick="window.location.href='Login.php';" type='button' class='btn btn-success' >Accedi</button>
+			<button  onclick="window.location.href='../index.html';" type="button" class="btn btn-info " >Ritorno alla home</button>
+			<br>
+		</div>
+		<script> //  hide della schermata di registrazione effettuata
+			$("#MyAlert").hide();
+		</script>
     <?php
     		//error_reporting (0); leva errori di sistema esempio deprecated
             
 			$yy=date('Y')-18; //controllo data nascita maggiorenne
-			$yyyy=date('Y')-100; //controllo data nascita maggiorenne
+			$yyyy=date('Y')-100; //controllo data nascita maggiorenne 
     ?>
     
-		 <div class=" center_div">
+	<div id="MyPrincipale" class=" center_div" style="margin-bottom: 10px;">
+
          
-			<h2>Registrazione Utente</h2><br>
-			
-			<form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+		 <h2>Registrazione Utente</h2> <p style="font-size: 18px; text-align: right;"><a href="./Login.php">Sei già registrato? Clicca qui!</a> </p>
+	
+		<form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             
 			
             
 			<div class="form-group">	
 			<label> Username <span class="max">(massimo 12 caratteri)</span>*</label>	
-			<input class="form-control" type="text" placeholder="Inserisci l'username" name="username" maxlength="12" required><br>
+			<input id="username" class="form-control" type="text" placeholder="Inserisci l'username" name="username" maxlength="12" required><br>
 			
 			<label>Cognome * </label>
 			 <input  class="form-control" type="text" placeholder="Inserisci il cognome" name="cognome" maxlength="30" required><br>
@@ -101,7 +134,7 @@
              <input class="form-control" type="date" placeholder="Inserisci la tua data di nascita" name="nascita"  min="<?php echo date($yyyy.'-m-d');?>" max="<?php echo date($yy.'-m-d');?>" required><br>
              
 			<label> E-Mail *</label>
-			<input class="form-control"  placeholder="Inserisci l'email" type="email" name="email" maxlength="40" required><br>
+			<input id="mail" class="form-control"  placeholder="Inserisci l'email" type="email" name="email" maxlength="40" required><br>
 			
             <label> Nazione </label> 
 			<input class="form-control" type="text" placeholder="Inserisci la tua nazione" name="nazione" maxlength="30" ><br>
@@ -113,26 +146,26 @@
 			<input class="form-control" type="text" placeholder="Inserisci il tuo indirizzo" name="indirizzo" maxlength="40" ><br>
             
             <label> CAP </label>
-			<input class="form-control" type="text" placeholder="Inserisci il tuo CAP" name="CAP" maxlength="5" minlength="5" ><br>
+			<input id="cap" class="form-control" type="text" placeholder="Inserisci il tuo CAP" name="CAP" maxlength="5" minlength="5" ><br>
             
             <label> Cellulare </label>
-			<input class="form-control" type="tel" placeholder="3XX XXXXXXX" name="cellulare" size="number" maxlength="10"><br>
+			<input id="cell" class="form-control" type="tel" placeholder="3XX XXXXXXX" name="cellulare" size="number" maxlength="10"><br>
             
 			<label> Password *</label> 
-			<input class="form-control" placeholder="Inserisci la password" type="password" name="psw" maxlength="32" minlength="4" required><br>
+			<input class="form-control" id="psw" placeholder="Inserisci la password" type="password" name="psw" maxlength="32" minlength="4" required><br>
 
 			<label> Conferma Password *</label>
-			<input class="form-control" placeholder="Conferma la tua password" type="password" name="cpsw" maxlength="32" minlength="4" required><br>
-			
+			<input class="form-control" id="cpsw" placeholder="Conferma la tua password" type="password" name="cpsw" maxlength="32" minlength="4" required><br>
+
             <br>
 			 * Campi obbligatori
 			 <br><br> 
 			 </div>
-			 <input class="btn btn-danger" type="reset" value="Reset"> <input type="submit" class="btn btn-primary" name="submit" value="Salva">
+			 <input class="btn btn-danger" type="reset" value="Reset"> <input type="submit" id="mySalva" class="btn btn-primary" name="submit" value="Salva">
 			 
-			<button  onclick="window.location.href='../index.html';" type="button" class="btn btn-info destra" >Ritorno al menu</button>
+			<button  onclick="window.location.href='../index.html';" type="button" class="btn btn-info destra" >Ritorno alla home</button>
 			 
-			</form>
+		</form>
             
             <?php
             
@@ -183,10 +216,29 @@
 					exit("<br><h3>Campi principali non settati !</h3>");
                     
 				if (!empty($cellulare) AND !is_numeric($cellulare))
+				{
+				?>
+					<script>
+						$("#cell").val(("")).attr("placeholder","Non hai inserito numeri !"); 
+						$("#cell").attr("class","form-control is-invalid");
+						$("#cell").focus();
+					</script> 
+				<?php
 					exit ("<br><h3>Non hai inserito numeri nel campo del cellulare!</h3>");
+				}
   					
                 if (!empty($CAP) AND !is_numeric($CAP))
-					exit ("<br><h3>Non hai inserito numeri nel campo del CAP!</h3>");    
+				{
+				?>
+					<script>
+						$("#cap").val(("")).attr("placeholder","Non hai inserito numeri !"); 
+						$("#cap").attr("class","form-control is-invalid");
+						$("#cap").focus();
+					</script> 
+				<?php
+					exit ("<br><h3>Non hai inserito numeri nel campo del CAP!</h3>");
+
+				}   
                     
                 
 				/*_match("/^([a-z0-9\._-]+)(@[a-z0-9.-]+)(\.{1}[a-z]{2,4})$", $_POST['email'])))
@@ -194,13 +246,34 @@
    	            
                 
                 if($psw!=$cpsw)
+				{
+					?>
+					<script>
+						$("#psw").val(("")).attr("placeholder","Password diverse !"); 
+						$("#psw").attr("class","form-control is-invalid");
+						$("#psw").focus();
+
+						$("#cpsw").val(("")).attr("placeholder","Password diverse !"); 
+						$("#cpsw").attr("class","form-control is-invalid");
+					</script> 
+				<?php
 					exit("<br><h3>Conferma password diversa dalla password!</h3>");
+				}
 				
 				
                 $query1="SELECT username FROM Clienti WHERE username='".$username."'";
 				$ris=mysqli_query($db,$query1) or die("Query fallita 1");
                 if(mysqli_num_rows($ris)>0)
+				{
+					?>
+					<script>
+						$("#username").val(("")).attr("placeholder","Username già esistente !"); 
+						$("#username").attr("class","form-control is-invalid");
+						$("#username").focus();
+					</script> 
+				<?php
                 	exit("<br><h3>Username già esistente!</h3>");
+				}
                 
                 else
                 {
@@ -209,13 +282,16 @@
 				
 					//header('Refresh: 0; url=' . $login); //HEADER DEVE SEMPRE PRECEDERE OUTPUT
                     echo("<br><h4>Registrazione avvenuta con successo !</h4>");
-                    
-				}
-              
-         		
-         	
 				?>
-                
+					<script>
+        				$("#MyPrincipale").hide(); 
+						$("#MyAlert").show("slow");
+					</script>
+                <?php 
+
+				}
+				?>
+ 
                 <br><button  onclick="window.location.href='Login.php';" type='button' class='btn btn-success' >Accedi</button><br>
 			<?php 
             
@@ -223,10 +299,20 @@
             
             ?>
             
-            </div>
-			
+            </div>	
 
-		
+	
 	</body>
 	
 </html>
+<script>//controllo psw
+/*$(document).ready(function(){
+  $("form").submit(function(){
+    alert("Submitted");
+	//if($(#psw).val()==$(#cpsw).val())
+  });
+});
+*/
+	
+</script>
+

@@ -209,7 +209,8 @@
 </html>
 
 <script type="text/javascript">
-  function myFunction() {
+  function myFunction() 
+  {
 
     var x = document.getElementById("euro");
     document.getElementById("coin").value = x.value * 10;
