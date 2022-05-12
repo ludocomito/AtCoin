@@ -307,17 +307,14 @@
         <div>
             <form action="./php/manutenzione.php" method="POST">
                 <div class="form-group">
-                    <label for="cognome">Nome</label><input class="form-control" type="text"
-                        placeholder="Inserisci il nome" required><br>
-                    <label for="cognome">Cognome</label><input class="form-control" type="text"
-                        placeholder="Inserisci il cognome" required><br>
+                    <label for="cognome">Nome</label><input class="form-control" type="text" placeholder="Inserisci il nome" maxlength="30" required><br>
+                    <label for="cognome">Cognome</label><input class="form-control" type="text" placeholder="Inserisci il cognome" maxlength="30" required><br>
                     <label for="email">Email:</label><br>
-                    <input type="email" class="form-control" id="email" placeholder="Inserisci l'email" name="email"
-                        required>
+                    <input type="email" class="form-control" id="email" placeholder="Inserisci l'email" name="email" maxlength="40" required>
                 </div>
                 <div class="form-group">
                     <label for="messaggio">Messaggio:</label>
-                    <textarea class="form-control" rows="3" id="messaggio" required></textarea>
+                    <textarea class="form-control" rows="3" id="messaggio" maxlength="500" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Invia</button>
