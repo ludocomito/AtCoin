@@ -315,6 +315,7 @@
                 <div class="form-group">
                     <label for="messaggio">Messaggio:</label>
                     <textarea class="form-control" rows="3" id="messaggio" maxlength="500" required></textarea>
+                    <label type="text" id="textCount"></label> <!--live refresh of written characters-->
                 </div>
 
                 <button type="submit" class="btn btn-primary">Invia</button>
@@ -396,3 +397,13 @@ const myChart = new Chart(
     );
 
   </script>
+
+<script type="text/javascript">
+    $(function(){
+     var maxlength = 500;
+      $("#messaggio").keyup(function(){
+       var currentlength = $(this).val().length;
+       $("#textCount").html(currentlength + '/500 caratteri');
+      });
+    });
+    </script>

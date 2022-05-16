@@ -76,7 +76,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
 
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.html">
 
           <img class="logoMenu" src="../assets/logoMenu.png" alt="logo" /> <!-- menu grande -->
 
