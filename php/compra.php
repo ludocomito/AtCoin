@@ -134,7 +134,7 @@
 
           <div class="input-group mb-2 mr-sm-2">
 
-            <input type="number" class="form-control" placeholder="Euro" min="0.1" max="9999999999.99" step="0.01" name="euro" id="euro" onchange="myFunction()" required>
+            <input type="number" class="form-control" placeholder="Euro" min="0" max="9999999999" step="1" name="euro" id="euro" onchange="myFunction()" required>
             <div class="input-group-append">
               <span class="input-group-text" id="basic-addon2">€</span>
             </div>
