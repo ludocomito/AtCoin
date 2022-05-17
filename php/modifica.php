@@ -6,6 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="shortcut icon" href="../assets/blockchain.jpg" />
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 
@@ -78,12 +80,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <img class="structural" src="../assets/logoMenu.png" alt="logo" />
-
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
 
-        <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../index.html">
 
           <img class="logoMenu" src="../assets/logoMenu.png" alt="logo" /> <!-- menu grande -->
 

@@ -1,12 +1,28 @@
+<!DOCTYPE html>
 <html>
 
   <head>
   
   		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="shortcut icon" href="../assets/blockchain.jpg" />
+
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		  <!-- jQuery library -->
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		 <!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+		<!-- Icone -->
+		<script src="https://unpkg.com/ionicons@4.2.1/dist/ionicons.js"></script>
+
+		 
+		<link href="../css/StyleMenu.css" rel="stylesheet" type="text/css">
 
 		  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <!-- per svg alert -->
             <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -24,7 +40,14 @@
 		
 
 		<style>
-			
+			.titolo
+			{
+				color:#383838 !important;
+			}	
+			a:link 
+			{
+            	text-decoration: none;
+       	 	}
 			.max{
 				font-family: Helvetica, Sans-Serif;
 				font-size:12px;
@@ -33,20 +56,7 @@
 				font-family: Helvetica, Sans-Serif;
 			
 			}
-            
-        /*     #contenitore 
-            {
-         	  	width:100%;
-            }
-            
-            
-            #contenitore .divisione
-            {
-         	  	width:50%;
-            	float: left;
-            }
-            
-            */
+
 			.center_div
             {
 				margin: 0 auto;
@@ -56,6 +66,7 @@
 
 			h2{
 				font-family: Helvetica, Sans-Serif;
+				font-size: 200%;
 			
 			}
             h3{
@@ -80,12 +91,83 @@
             {
             	font-weight: bold;
             }
+			@media screen and (min-width: 601px) 
+			{
+  				.myLink 
+				{
+    				font-size: 120%; 
+					text-align: right;
+					
+ 				}
+			}
+
+			@media screen and (max-width: 600px) 
+			{
+  				.myLink 
+				{
+					font-size: 100%;
+    				text-align: right;
+  				}
+			}
+			
 		</style>
   </head>
-  <br>
-	<body style="font-family: Helvetica, Sans-Serif">
 
-	
+	<body style="font-family: Helvetica, Sans-Serif" >
+
+    <div id="menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+			<a class="navbar-brand" href="../index.html">
+            	<img class="structural" src="../assets/logoMenu.png" alt="logo" />
+			</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+                <a class="navbar-brand" href="../index.html">
+
+                    <img class="logoMenu" src="../assets/logoMenu.png" alt="logo" /> <!-- menu grande -->
+                </a>
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#Progetto"><span class="medio">Il nostro progetto</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#moneta"><span class="medio">La nostra moneta</span></a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link" href="../index.html#Candidato"><span class="medio">Lavoro con noi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#Contatti"><span class="medio">Contatti</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item a active">
+                        <a class="nav-link" href="../php/Registrazione.php">
+                            <ion-icon name="create"></ion-icon><span class="medio"> Registrati </span><span class="sr-only">(current)</span>
+						</a>
+                        
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link" href="../php/Login.php">
+                            <ion-icon name="person"></ion-icon><span class="medio"> Accedi</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+
 				<!-- da visualizzare solo in caso di registrazione -->
 		<div id= "MyAlert" class=" center_div" style="margin-bottom: 10px;">
 			<h2>Registrazione effettuata !</h2>
@@ -109,11 +191,11 @@
 			$yy=date('Y')-18; //controllo data nascita maggiorenne
 			$yyyy=date('Y')-100; //controllo data nascita maggiorenne 
     ?>
-    
+    <br>
 	<div id="MyPrincipale" class=" center_div" style="margin-bottom: 10px;">
 
          
-		 <h2>Registrazione Utente</h2> <p style="font-size: 18px; text-align: right;"><a href="./Login.php">Sei già registrato? Clicca qui!</a> </p>
+		 <h2 class="titolo">Registrazione Utente</h2> <p class="myLink"style=""><a href="./Login.php">Sei già registrato? Clicca qui!</a> </p>
 	
 		<form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             

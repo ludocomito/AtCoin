@@ -102,8 +102,8 @@ body {
 @media screen and (max-width: 600px) {
   .structural {
     text-align: right;
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
   }
 }
 
