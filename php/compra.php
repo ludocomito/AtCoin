@@ -24,7 +24,7 @@
   <!-- Icone -->
   <script src="https://unpkg.com/ionicons@4.2.1/dist/ionicons.js"></script>
 
-  <link href="StyleMenu.css" rel="stylesheet" type="text/css">
+  <link href="../css/StyleMenu.css" rel="stylesheet" type="text/css">
 
   <style>
     .center_div {
@@ -80,7 +80,9 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <a class="navbar-brand" href="../index.html">
+            	<img class="structural" src="../assets/logoMenu.png" alt="logo" />
+			</a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
 
