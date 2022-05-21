@@ -130,7 +130,7 @@
   <div class="center_div">
 
     <h2>Pre-ordina la nostra moneta @COIN</h2>
-    <p>Ricorda che al momento della sua uscita @COIN avrà il valore di 10€.</p><br><br>
+    <p>Ricorda che al momento 1€ equivale a 10 @COIN</p><br><br>
 
 
     <form class="form-inline" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
