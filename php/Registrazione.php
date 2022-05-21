@@ -142,7 +142,7 @@
                         <a class="nav-link" href="../index.html#moneta"><span class="medio">La nostra moneta</span></a>
                     </li>
                     <li class="nav-item a">
-                        <a class="nav-link" href="../index.html#Candidato"><span class="medio">Lavoro con noi</span></a>
+                        <a class="nav-link" href="../index.html#Candidato"><span class="medio">Lavora con noi</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#Contatti"><span class="medio">Contatti</span></a>
