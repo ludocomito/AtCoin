@@ -48,9 +48,9 @@ CREATE TABLE IF NOT EXISTS `Clienti` (
 --
 
 INSERT INTO `Clienti` (`ID_cliente`, `username`, `password`, `nome`, `cognome`, `dataNascita`, `nazione`, `citta`, `indirizzo`, `CAP`, `email`, `cellulare`) VALUES
-(11, 'Luis', '48eea55de44413fcf97ac33a6c6c6dc5', 'Luigi', 'Alonge', '1999-06-16', 'Italia', 'Roma', 'via celso ulpiani', '00156', 'l.alonge@fatainformatica.com', '3313361101'),
-(12, 'Alessio', 'dee927e28cc39567b04117d81d3a04c3', 'Alessio', 'Alonge', '1976-07-01', 'Italia ', 'Roma', 'Via ammazzi numero privulazzo', '00156', 'a.alonge@erpware.it', '3456677888'),
-(13, 'alonge', '74b87337454200d4d33f80c4663dc5e5', 'Luigi', 'Alonge', '2000-06-29', '', '', '', '', 'l.alonge@fatainformatica.com', '');
+(11, 'Luis', '48eea55de44413fcf97ac33a6c6c6dc5', 'Luigi', 'Alonge', '1999-06-16', 'Italia', 'Roma', 'via tiburtina', '00150', 'luiss@gmail.com', '3353363303'),
+(12, 'Alessio', 'dee927e28cc39567b04117d81d3a04c3', 'Alessio', 'prova', '1976-07-01', 'Italia ', 'Roma', 'Via ammazzi numero privulazzo', '00150', 'a.alonge@erpware.it', '3456677888'),
+(13, 'alonge', '74b87337454200d4d33f80c4663dc5e5', 'Luigi', 'Alonge', '2000-06-29', '', '', '', '', 'luisalo@gmail.com', '');
 
 -- --------------------------------------------------------
 
